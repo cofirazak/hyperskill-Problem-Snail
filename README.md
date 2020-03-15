@@ -52,7 +52,10 @@ Lets's solve this Linear equation with integer precision:<br />
 Explanation:<br />
 The ![equation](https://latex.codecogs.com/gif.latex?-%201) and ![equation](https://latex.codecogs.com/gif.latex?+%201) here are fixing the integer division truncation in Java.<br />
 If in Java we divide integers without remainder (let's say 6 / 3) then after division we are ok.<br />
-But if we have a remainder (let's say 10 / 3), then we have lost the fractional part and the integer part is less then we need.<br />
+But if we have a remainder (let's say 10 / 3), then we have lost the fractional part and the integer part is less then the minimum possible integer by 1.<br />
 So now the trick:<br />
-If we ![equation](https://latex.codecogs.com/gif.latex?-%201) from both numerators then we get both answers less then we need by 1.<br />
-And here comes the ![equation](https://latex.codecogs.com/gif.latex?+%201), which fixes it.
+If we ![equation](https://latex.codecogs.com/gif.latex?-%201) from both numerators:<br />
+![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B10%7D%7B3%7D%20%5Crightarrow%20%5Cfrac%7B10%20-%201%7D%7B3%7D%20%3D%203) <br />
+![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B6%7D%7B3%7D%20%5Crightarrow%20%5Cfrac%7B6%20-%201%7D%7B3%7D%20%3D%201) <br />
+then we get both answers less then the minimum possible integer by 1.<br />
+And here comes the ![equation](https://latex.codecogs.com/gif.latex?+%201), which fixes both answers.
