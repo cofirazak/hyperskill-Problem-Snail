@@ -52,15 +52,15 @@ Lets's solve this Linear equation with integer precision:<br />
 Explanation:<br />
 The ![equation](https://latex.codecogs.com/gif.latex?-%201) and ![equation](https://latex.codecogs.com/gif.latex?+%201) here are fixing the integer division truncation in Java.<br />
 If in Java we divide integers without remainder (let's say 6 / 3) then after division we are ok.<br />
-But if we have a remainder (let's say 10 / 3), then we have lost the fractional part and the integer part is less then the minimum possible integer by 1.<br />
+But if we have a remainder (let's say 10 / 3), then we have lost the fractional part and the integer part become less then the minimum possible integer by 1.<br />
 
 ---
 
 What I mean by "minimum possible integer"?<br />
    Imagine that this division examples are lever scales.<br />
    On one bowl of scales there is 10 kg.<br />
-   You have many weights for scales (3 kg each).<br />
-   What's the minimum possible number of weights (3 kg each) you need to balance or outweight the 10kg bowl?<br />
+   You have many loads for scales (3 kg each).<br />
+   What's the minimum possible number of loads (3 kg each) you need to balance or outweight the 10kg bowl?<br />
    Same question in the situation if on one bowl of scales there is 6 kg.<br />
 
 ---
